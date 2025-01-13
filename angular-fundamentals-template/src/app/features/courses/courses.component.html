@@ -1,0 +1,13 @@
+<div class="course-list">
+  <app-search (onSearchInputChanges)="onSearchInputChanges($event)"></app-search>
+
+  <ng-container *ngIf="filteredCourseList.length > 0; else noCourses">
+    <app-course-list [courses]="filteredCourseList"></app-course-list>
+  </ng-container>
+
+  <ng-template #noCourses>
+    <p class="no-courses-message">No courses available.</p>
+  </ng-template>
+
+  <app-button buttonText="Add New Course" (click)="onAddCourse()"></app-button>
+</div>

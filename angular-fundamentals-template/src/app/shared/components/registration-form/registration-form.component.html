@@ -1,0 +1,77 @@
+<h2 class="text-align-center">Registration</h2>
+<div class="app-plate">
+  <form
+    class="registration-form"
+    [formGroup]="registrationForm"
+    (ngSubmit)="onRegistrationFormSubmit()"
+  >
+    <div>
+      <div class="form__control">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Input text"
+          formControlName="name"
+        />
+        <span
+          id="nameErrorMessage"
+          class="text-danger"
+          *ngIf="
+            registrationForm.get('name')?.touched &&
+            registrationForm.get('name')?.invalid
+          "
+        >
+          {{ registrationForm.get('name').errors?.['required'] ? "Name is required." : "Name length should not less than 6 characters" }}
+        </span>
+      </div>
+      <div class="form__control">
+        <label for="email">Email</label>
+        <input
+          type="text"
+          id="email"
+          placeholder="Input text"
+          formControlName="email"
+        />
+        <span
+          id="emailErrorMessage"
+          class="text-danger"
+          *ngIf="
+            registrationForm.get('email')?.touched &&
+            registrationForm.get('email')?.errors
+          "
+          >{{ registrationForm.get('email')?.errors?.['required'] ? "Email is required." : "Invalid Email" }}</span
+        >
+      </div>
+      <div class="form__control">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Input text"
+          formControlName="password"
+        />
+        <span
+          id="passwordErrorMessage"
+          class="text-danger"
+          *ngIf="
+            registrationForm.get('password')?.touched &&
+            registrationForm.get('password')?.invalid
+          "
+          >{{ registrationForm.get('password')?.errors?.['required'] ? "password is required." : "Invalid Password, Required At Least 6 Characters" }}</span
+        >
+      </div>
+    </div>
+    <div class="form__action">
+      <app-button
+        type="submit"
+        buttonText="Submit"
+        [disabled]="registrationForm.invalid"
+      ></app-button>
+    </div>
+    <div class="form__text">
+      If you don't have an account you may
+      <strong><a [routerLink]="['/Login']">Login</a></strong>
+    </div>
+  </form>
+</div>

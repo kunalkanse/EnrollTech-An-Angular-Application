@@ -1,0 +1,16 @@
+<!-- <div class="app-search">
+  <input type="text" placeholder="Input text" [(ngModel)]="searchText" />
+  <app-button
+    buttonText="Search"
+    (click)="onSearchButtonClicked()"
+  ></app-button>
+</div> -->
+
+
+<div class="app-search">
+  <input type="text" placeholder="{{searchText}}" [(ngModel)]="searchText" />
+  <app-button
+    buttonText="Search"
+    (click)="onSearchButtonClicked()"
+  ></app-button>
+</div>

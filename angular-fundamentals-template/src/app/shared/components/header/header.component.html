@@ -1,0 +1,11 @@
+<div class="app-header">
+  <img alt="logo" src="assets/logo.svg">
+  
+  <div>
+    <!-- <ng-content></ng-content> -->
+    <div class="header-right">
+      <span>{{ userName$ | async }}</span>
+      <app-button *ngIf="userName$" [buttonText]="'LOGOUT'" (click)="logout()"></app-button>
+    </div>
+  </div>
+</div>

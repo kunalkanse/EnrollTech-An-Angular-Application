@@ -1,0 +1,73 @@
+@import 'src/app/shared/styles/styles';
+
+
+.course-form{
+  margin-bottom: 50px;
+}
+
+.page-title{
+  font-size: 30px;
+  text-align: center;
+}
+
+.course {
+ min-width: 60vw;
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    & input {
+      flex: 1;
+    }
+
+    & app-button {
+      margin-left: 16px;
+    }
+
+    & .course__duration {
+      margin-left: 16px;
+    }
+  }
+
+  &__authors {
+    margin-top: 8px;
+    display: flex;
+
+    &-item {
+      margin-right: 10px;
+    }
+  }
+
+  &__icon {
+    margin-left: 4px;
+    cursor: pointer;
+  }
+}
+
+.form__action{
+  display: flex;
+  justify-content: flex-end;
+  gap: 25px;
+}
+
+.author-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin: 5px 0;
+}
+
+.authors_list{
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.course__duration{
+  font-size: large;
+  font-weight: 600;
+}

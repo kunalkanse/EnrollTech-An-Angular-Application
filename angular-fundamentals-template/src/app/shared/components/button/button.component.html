@@ -1,0 +1,6 @@
+<div class="app-button">
+  <button [type]="type" *ngIf="buttonText" [disabled]="disabled">
+    {{ buttonText }}
+  </button>
+  <button *ngIf="iconName" [type]="type"><fa-icon [icon]="iconName"></fa-icon></button>
+</div>

@@ -1,0 +1,23 @@
+.course-list {
+  margin: 50px 0;
+}
+
+.loading-spinner {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.error-message {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ff4d4f;
+  background-color: #ffecec;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ff4d4f;
+}
